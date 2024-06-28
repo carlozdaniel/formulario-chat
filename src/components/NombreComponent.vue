@@ -36,6 +36,7 @@
       };
     },
     methods: {
+      // Guarda los nombres en el store de Vuex y emite un evento si se completan todos los campos
       guardarNombre() {
         this.$store.commit('setNombre', this.nombre);
         this.$store.commit('setSegundoNombre', this.segundoNombre);
@@ -51,6 +52,7 @@
   </script>
 
   <style scoped>
+  /* Estilos para el componente de nombre */
   .chat-bubble {
     display: flex;
     align-items: flex-start;

@@ -32,6 +32,7 @@
       };
     },
     computed: {
+      // Computed property para formar la fecha de nacimiento
       fechaNacimiento() {
         if (this.dia && this.mes && this.año) {
           return `${this.dia} ${this.mes} ${this.año}`;
@@ -41,6 +42,7 @@
     },
     methods: {
       guardarFechaNacimiento() {
+        // Guarda la fecha de nacimiento en el store de Vuex y emite un evento si se completan todos los campos
         this.$store.commit('setFechaNacimiento', this.fechaNacimiento);
 
         if (this.dia && this.mes && this.año) {
@@ -52,6 +54,7 @@
   </script>
 
   <style scoped>
+  /* Estilos para el componente de fecha de nacimiento */
   .chat-bubble {
     display: flex;
     align-items: flex-start;

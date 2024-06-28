@@ -71,6 +71,7 @@
         };
 
         try {
+          // Enviar los datos al backend usando Axios
           const response = await axios.post('http://localhost:5199/api/users', data);
           console.log('Datos enviados al backend:', response.data);
         } catch (error) {

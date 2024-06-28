@@ -6,6 +6,7 @@
         <h2 class="chat-title">En menos de 5 minutos</h2>
       </div>
       <div class="chat-content">
+        <!-- Flujo de componentes basado en el estado actual del formulario -->
         <NombreComponent v-if="mostrarNombre" @completado="mostrarFechaNacimiento = true" />
         <FechaNacimientoComponent v-if="mostrarFechaNacimiento" @completado="mostrarDatosContacto = true" />
         <DatosContactoComponent v-if="mostrarDatosContacto" @completado="mostrarResumen = true" />
@@ -93,7 +94,7 @@ export default {
 
 .chat-content {
   padding: 20px;
-  overflow-y: auto; /* Hacer que el contenido sea desplazable */
+  overflow-y: auto;
   flex-grow: 1;
 }
 </style>

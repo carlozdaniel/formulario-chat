@@ -1,4 +1,5 @@
 import { createStore } from 'vuex';
+// Configuración de Vuex Store para gestionar el estado de la aplicación
 
 export default createStore({
   state: {
@@ -12,6 +13,7 @@ export default createStore({
     currentStep: 1
   },
   mutations: {
+    //para actualizar el estado con los valores del formulario
     setNombre(state, payload) {
       state.nombre = payload;
     },
@@ -33,6 +35,7 @@ export default createStore({
     setTelefono(state, payload) {
       state.telefono = payload;
     },
+    //para avanzar al siguiente paso del formulario
     nextStep(state) {
       state.currentStep++;
     }
